@@ -1,0 +1,34 @@
+{
+  "name": "@whi/essence",
+  "version": "0.1.0",
+  "description": "A Javascript implementation for packing/unpacking contextual responses",
+  "main": "src/index.js",
+  "browser": "dist/essence.bundled.js",
+  "files": [
+    "README.md",
+    "src/index.js",
+    "src/assert.js",
+    "src/dynamic_error.js",
+    "dist/essence.bundled.js"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Brisebois <matthew@webheroes.ca>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjbrisebois/js-essence/"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@whi/http": "^0.2.3",
+    "@whi/stdlog": "^0.3.4",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.0",
+    "puppeteer": "^10.0.0",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
