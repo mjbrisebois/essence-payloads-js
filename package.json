@@ -1,6 +1,6 @@
 {
   "name": "@whi/essence",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Javascript implementation for packing/unpacking contextual responses",
   "main": "src/index.js",
   "browser": "dist/essence.bundled.js",
