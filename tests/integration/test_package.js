@@ -84,12 +84,12 @@ function basic_tests ( page_url ) {
 	    try {
 		throw pack.value();
 	    } catch (err) {
-		return [ err.name, err.constructor.name, err.message, err instanceof Interpreter.error_classes.ServerError ];
+		return [ err.constructor.name, err.name, err.message, err instanceof Interpreter.error_classes.ServerError ];
 	    }
 	});
 
 	expect( result		).to.deep.equal([
-	    "InstanceNotRunningError",
+	    "ServerError",
 	    "InstanceNotRunningError",
 	    "Holochain instance is not active yet",
 	    true,

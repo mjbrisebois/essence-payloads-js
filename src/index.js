@@ -6,6 +6,17 @@ const { DynamicError }			= require('./dynamic_error.js');
 const MIN_RM_STACK_LINES		= 1;
 
 
+function create_dynammic_class ( kind ) {
+    // Since 'eval' is not very safe, we must be very strict on the value of 'kind'
+    if ( /^[a-zA-Z_]+$/.test( kind ) === false )
+	throw new Error(`Error kind contains invalid characters for class name: ${kind}`);
+
+    let cls;
+    eval(`cls = class ${kind} extends DynamicError {}`);
+
+    return cls;
+}
+
 class Translator {
     constructor ( expected_kinds = [], opts = {} ) {
 	this.expected_kinds		= expected_kinds;
@@ -15,7 +26,7 @@ class Translator {
 	}, opts );
 
 	for (let kind of expected_kinds ) {
-	    this.error_classes[kind]	= class extends DynamicError {};
+	    this.error_classes[kind]	= create_dynammic_class( kind );
 	}
     }
 
@@ -110,7 +121,7 @@ class Package {
 	    }
 	    else if ( !Object.keys( this.parent.error_classes ).includes( payload.kind ) ) {
 		console.log("Defining new DynamicError: ", payload.kind );
-		this.parent.error_classes[payload.kind] = class extends DynamicError {};
+		this.parent.error_classes[payload.kind] = create_dynammic_class( payload.kind );
 	    }
 
 	    assert_type( "string",		payload.error );

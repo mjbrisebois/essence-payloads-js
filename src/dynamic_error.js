@@ -7,10 +7,6 @@ class DynamicError extends Error {
 	    "value": kind,
 	    writable: false,
 	});
-	Object.defineProperty( this.constructor, "name", {
-	    "value": name,
-	    writable: false,
-	});
 	Object.defineProperty( this, "name", {
 	    "value": name,
 	    writable: false,

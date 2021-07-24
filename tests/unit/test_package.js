@@ -139,6 +139,27 @@ function parse_tests () {
 	}				).to.throw( AppError, "instance is not active" );
     });
 
+    it("should parse JSON into error package again", async () => {
+	const error_pack_msg		= JSON.stringify({
+	    "type": "failure",
+	    "payload": {
+		"kind": "AppError",
+		"error": "ItBrokeError",
+		"message": "App broke",
+		"stack": [],
+	    },
+	});
+
+	const pack			= Interpreter.parse( error_pack_msg );
+	const error			= pack.value();
+
+	expect( error			).to.be.an("error");
+	expect(() => {
+	    throw error;
+	}				).to.throw( AppError, "broke" );
+
+    });
+
     it("should fail to parse invalid message", async () => {
 	expect(() => {
 	    Interpreter.parse( null );
