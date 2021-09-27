@@ -19,7 +19,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mjbrisebois/js-essence/"
+    "url": "https://github.com/mjbrisebois/essence-payloads-js/"
   },
   "dependencies": {},
   "devDependencies": {

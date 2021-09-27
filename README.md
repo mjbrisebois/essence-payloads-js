@@ -4,9 +4,9 @@
 A Javascript implementation for packing/unpacking contextual responses.  This could be considered as
 a tool for the data translation layer.
 
-[![](https://img.shields.io/github/issues-raw/mjbrisebois/js-essence?style=flat-square)](https://github.com/mjbrisebois/js-essence/issues)
-[![](https://img.shields.io/github/issues-closed-raw/mjbrisebois/js-essence?style=flat-square)](https://github.com/mjbrisebois/js-essence/issues?q=is%3Aissue+is%3Aclosed)
-[![](https://img.shields.io/github/issues-pr-raw/mjbrisebois/js-essence?style=flat-square)](https://github.com/mjbrisebois/js-essence/pulls)
+[![](https://img.shields.io/github/issues-raw/mjbrisebois/essence-payloads-js?style=flat-square)](https://github.com/mjbrisebois/essence-payloads-js/issues)
+[![](https://img.shields.io/github/issues-closed-raw/mjbrisebois/essence-payloads-js?style=flat-square)](https://github.com/mjbrisebois/essence-payloads-js/issues?q=is%3Aissue+is%3Aclosed)
+[![](https://img.shields.io/github/issues-pr-raw/mjbrisebois/essence-payloads-js?style=flat-square)](https://github.com/mjbrisebois/essence-payloads-js/pulls)
 
 ## Overview
 The main feature of this tool is packing or unpacking messages.
